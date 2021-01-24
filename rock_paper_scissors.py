@@ -1,4 +1,6 @@
+import random
 lst = ['xx','Rock','Paper','Scissors']
+python_choice_list = [1,2,3]
 def displayOptions():
     print("""
             Select anyone by number
@@ -52,7 +54,7 @@ noOfPlayers = int(input("""
 if noOfPlayers == 1:
     displayOptions()
     my_choice = int(input())
-    python_choice = int(input())
+    python_choice = random.choice(python_choice_list)
     RPSGame1P(lst[my_choice],lst[python_choice])
 elif noOfPlayers == 2:
     Player1 = input("Enter Player Name1")
